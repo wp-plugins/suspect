@@ -1,0 +1,107 @@
+/* Reset */
+html body #suspect *{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+html body #suspect {line-height:1}
+html body #suspect ol,ul{list-style:none}
+html body #suspect blockquote,q{quotes:none}
+html body #suspect blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+html body #suspect :focus{outline:0}
+html body #suspect ins{text-decoration:none}
+html body #suspect del{text-decoration:line-through}
+html body #suspect table{border-collapse:collapse;border-spacing:0}
+
+
+html body #suspect {
+	font-size: 14px;
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: left;
+	background: #e1e1e1;
+	color: #000;
+	position: fixed;
+	z-index: 10000;
+	width: 100%;
+	top: 0;
+}
+
+
+html body #suspect #suspect_nav {
+	list-style: none;
+	overflow: auto;
+	border-bottom: 1px solid #797979;
+}
+html body #suspect #suspect_nav li {
+	float: left;
+}
+html body #suspect #suspect_nav li.page_time {
+	float: right;
+	padding: 3px 5px;
+}
+html body #suspect #suspect_nav li a {
+	color: #000;
+	text-decoration: none;
+	padding: 3px 5px;
+	display: block;
+	border-right: 1px solid #888;
+}
+html body #suspect #suspect_nav li a:hover {
+	background: #fff;
+}
+html body #suspect #suspect_nav li#close {
+	float: right;
+	padding: 0;
+}
+html body #suspect #suspect_nav li#close a {
+	display: block;
+	border-left: 1px solid #888;
+}
+
+
+html body #suspect #details {
+	clear: left;
+	font-size: 14px;
+	font-family: 'Monaco', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+	display: none;
+	height: 250px;
+	overflow: auto;
+	border-bottom: 1px solid #000;
+	background: #fff;
+}
+html body #suspect #details table {
+	display: none;
+	width: 100%;
+}
+html body #suspect #details table tr th {
+	font-weight: normal;
+	background: #4d4d4d;
+	color: #fff;
+	text-align: left;
+}
+html body #suspect #details table tfoot tr th {
+	text-align: right;
+}
+html body #suspect #details table tr td,
+html body #suspect #details table tr th {
+	padding: 6px 10px;
+}
+html body #suspect #details table tr td.first {
+	padding-right: 10px;
+	color: #797979;
+	vertical-align: top;
+}
+html body #suspect #details table tr td.number {
+	text-align: right;
+	width: 30px;
+}
+html body #suspect #details table tr td.time {
+	width: 90px;
+}
+html body #suspect #details #suspect_queries tr td pre {
+	white-space: normal;
+	color: #24d015;
+	line-height: 1.4em;
+}
+html body #suspect #details #suspect_queries tr td pre strong {
+	color: #2246f4;
+}
+html body #suspect #details #suspect_queries tr td pre span.string {
+	color: #3b5413;
+}
