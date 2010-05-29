@@ -1,19 +1,19 @@
-<?php if ( '/wp-content/plugins/suspect/suspect.php' === getenv('SCRIPT_NAME') ) exit('No direct script access allowed.');
+<?php  if ( !defined('ABSPATH') ) exit('No direct script access allowed');
 /*
 Plugin Name: Suspect
 Plugin URI: http://github.com/ampt/suspect
 Description: A debugging toolbar for Wordpress.
-Author: Luke Gallagher
-Version: 0.1
+Author: ampt
+Version: 0.2
 Author URI: http://notfornoone.com/
 */
 
-if( ! version_compare(PHP_VERSION, '5.2.0', '>=') ) {
+if( !version_compare(PHP_VERSION, '5.2.0', '>=') ) {
 	exit('Suspect requires PHP 5.2.x or higher to run. You are currently running PHP ' . PHP_VERSION . '.');
 }
 
 global $wp_version;
-if( ! version_compare($wp_version, '2.9', '>=') ) {
+if( !version_compare($wp_version, '2.9', '>=') ) {
 	exit('Suspect requires Wordpress 2.9.x or higher to run. You are currently running Wordpress ' . $wp_version . '.');	
 }
 
@@ -49,7 +49,14 @@ class Suspect {
 	 * @return	void
 	 */
 	public function run() {
-		global $wp_actions, $wpdb;
+		global $wp_actions, $wpdb, $wp_version;
+		$suspect_actions = $wp_actions;
+
+		// Wordpress 3.x stores the action name as a key when previously it was stored as a value
+		if( version_compare( $wp_version, '2.9.2', '>' ) ) {
+			$suspect_actions = array_keys( $wp_actions );
+		}
+
 		include(SUSPECTPATH.'/views/suspect_view.php');
 	}
 	

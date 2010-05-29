@@ -1,7 +1,7 @@
 <?php if( !defined('SUSPECTPATH') ) exit('No direct script access allowed.'); ?>
 
-	<div id="suspect" style="">
-		<ul id="suspect_nav" style="">
+	<div id="suspect">
+		<ul id="suspect_nav">
 			<li id="close"><a href="#close">X</a></li>
 			<li class="page_time">Page: <?php timer_stop(1); ?> seconds</li>
 			<li><a href="#suspect_actions">Actions (<?php echo count($wp_actions); ?>)</a></li>
@@ -9,10 +9,10 @@
 			<li><a href="#suspect_post">POST (<?php echo count($_POST); ?>)</a></li>
 		</ul>
 
-		<div id="details" style="">
+		<div id="details">
 			<table id="suspect_actions">
 				<tbody>
-				<?php foreach($wp_actions as $k => $v) : ?>
+				<?php foreach($suspect_actions as $k => $v) : ?>
 					<tr>
 						<td class="first number"><?php echo $k + 1; ?></td>
 						<td><?php echo $v; ?></td>
