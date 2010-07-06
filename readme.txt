@@ -21,7 +21,7 @@ Upload the Suspect plugin to your blog, activate it. That's it.
 
 == Screenshots ==
 
-1. screenshot-1.png
+1. Shows a list of database queries for the current page request
 
 == Changelog ==
 
