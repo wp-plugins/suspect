@@ -9,6 +9,8 @@ A debugging toolbar for Wordpress.
 
 == Description ==
 
+**This plugin is no longer maintained checkout the official [WordPress debug bar plugin](http://wordpress.org/extend/plugins/debug-bar/)**
+
 Displays a toolbar for debugging and shows information for the following:
 
 * Wordpress actions
@@ -21,7 +23,7 @@ Upload the Suspect plugin to your blog, activate it. That's it.
 
 == Screenshots ==
 
-1. screenshot-1.png
+1. Shows a list of database queries for the current page request
 
 == Changelog ==
 
