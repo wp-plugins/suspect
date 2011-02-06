@@ -9,6 +9,8 @@ A debugging toolbar for Wordpress.
 
 == Description ==
 
+**This plugin is no longer maintained checkout the official [WordPress debug bar plugin](http://wordpress.org/extend/plugins/debug-bar/)**
+
 Displays a toolbar for debugging and shows information for the following:
 
 * Wordpress actions
